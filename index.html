@@ -49,7 +49,7 @@
             --footer-text: #94a3b8;
             --footer-border: rgba(255, 255, 255, 0.06);
             --toggle-bg: #e2e8f0;
-            --bubble-opacity: 0.04;
+            --bubble-opacity: 0.05;
             --hero-overlay: rgba(255, 255, 255, 0.70);
             --radius-sm: 12px;
             --radius-md: 20px;
@@ -78,7 +78,7 @@
             --blue-100: #1a2a4a;
             --blue-200: #2a3f6a;
             --blue-50: #0e1a2e;
-            --bubble-opacity: 0.06;
+            --bubble-opacity: 0.07;
             --hero-overlay: rgba(10, 14, 26, 0.75);
         }
 
@@ -137,7 +137,7 @@
         }
 
         /* ============================================================
-           BACKGROUND BUBBLES — Very Subtle
+           BACKGROUND BUBBLES — FIXED: smooth fade, no "pop" reset
            ============================================================ */
         .bubble-container {
             position: fixed;
@@ -149,27 +149,33 @@
 
         .bubble {
             position: absolute;
-            bottom: -100px;
+            bottom: -120px;
             border-radius: 50%;
-            opacity: var(--bubble-opacity);
+            opacity: 0;
             animation: rise linear infinite;
             background: radial-gradient(circle at 30% 30%, var(--blue-300), var(--blue-500));
             filter: blur(2px);
-            will-change: transform;
+            will-change: transform, opacity;
+            /* start invisible, fade in gradually */
         }
 
         @keyframes rise {
             0% {
-                transform: translateY(0) scale(1) rotate(0deg);
-                opacity: var(--bubble-opacity);
+                transform: translateY(0) scale(0.6) rotate(0deg);
+                opacity: 0;
             }
 
-            50% {
-                opacity: calc(var(--bubble-opacity) * 2);
+            8% {
+                opacity: var(--bubble-opacity);
+                transform: translateY(0) scale(0.8) rotate(5deg);
+            }
+
+            85% {
+                opacity: calc(var(--bubble-opacity) * 1.8);
             }
 
             100% {
-                transform: translateY(-110vh) scale(0.3) rotate(720deg);
+                transform: translateY(-115vh) scale(0.2) rotate(720deg);
                 opacity: 0;
             }
         }
@@ -581,7 +587,7 @@
 
         .hero h1 {
             font-family: 'Playfair Display', serif;
-            font-size: clamp(44px, 7.5vw, 88px);
+            font-size: clamp(44px, 5.5vw, 88px);
             font-weight: 700;
             line-height: 1.08;
             letter-spacing: -0.01em;
@@ -604,7 +610,7 @@
             left: 0;
             width: 100%;
             height: 6px;
-            background: var(--blue-200);
+            background: blue;
             opacity: 0.4;
             border-radius: 4px;
         }
@@ -623,12 +629,10 @@
 
         .hero-actions {
             display: flex;
-            flex-wrap: wrap;
             justify-content: center;
-            gap: 14px;
-            margin-top: 36px;
-            animation: fadeInUp 0.8s ease 0.45s forwards;
-            opacity: 0;
+            align-items: center;
+            gap: 20px;
+            flex-wrap: nowrap;
         }
 
         .hero-dots {
@@ -732,12 +736,15 @@
             position: relative;
             overflow: hidden;
             will-change: transform;
+            width: 100%;
         }
 
         .btn-primary {
             background: var(--blue-500);
             color: #fff;
             box-shadow: var(--shadow-glow);
+            align-items: center;
+            text-align: center;
         }
 
         .btn-primary::before {
@@ -769,6 +776,8 @@
             color: var(--text-primary);
             border: 1px solid var(--border-color);
             transition: all var(--transition-fast);
+            align-items: center;
+            text-align: center;
         }
 
         [data-theme="dark"] .btn-secondary {
@@ -2033,8 +2042,8 @@
         }
 
         /* ============================================================
-   CONTACT GRID
-   ============================================================ */
+           CONTACT GRID
+           ============================================================ */
         .contact-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -2050,8 +2059,8 @@
         }
 
         /* ============================================================
-   REVEAL ANIMATIONS (if used)
-   ============================================================ */
+           REVEAL ANIMATIONS (if used)
+           ============================================================ */
         .reveal-left {
             opacity: 0;
             transform: translateX(-40px);
@@ -2075,13 +2084,13 @@
         }
 
         /* ============================================================
-   CONTACT FORM WRAPPER (inline style overrides)
-   ============================================================ */
+           CONTACT FORM WRAPPER (inline style overrides)
+           ============================================================ */
         /* The wrapper has inline styles; we can add refinement if needed */
 
         /* ============================================================
-   FORM FIELDS
-   ============================================================ */
+           FORM FIELDS
+           ============================================================ */
         .field {
             margin-bottom: 16px;
         }
@@ -2128,8 +2137,8 @@
         }
 
         /* ============================================================
-   BUTTON
-   ============================================================ */
+           BUTTON
+           ============================================================ */
         .btn-primary {
             display: inline-flex;
             align-items: center;
@@ -2187,8 +2196,8 @@
         }
 
         /* ============================================================
-   CONTACT INFO
-   ============================================================ */
+           CONTACT INFO
+           ============================================================ */
         .contact-info {
             display: flex;
             flex-direction: column;
@@ -2279,8 +2288,8 @@
         }
 
         /* ============================================================
-   MAP BOX (commented out but kept for consistency)
-   ============================================================ */
+           MAP BOX (commented out but kept for consistency)
+           ============================================================ */
         .map-box {
             border-radius: var(--radius-sm);
             overflow: hidden;
@@ -2322,6 +2331,35 @@
             color: var(--blue-500);
             font-size: 18px;
         }
+
+        /* ============================================================
+           BUBBLE RESPONSIVE — fewer, smaller on small screens
+           ============================================================ */
+        @media (max-width: 640px) {
+            .bubble {
+                opacity: 0 !important;
+                animation: none !important;
+                display: none !important;
+            }
+
+            .bubble-container {
+                display: none !important;
+            }
+        }
+
+        @media (min-width: 641px) and (max-width: 1024px) {
+            .bubble {
+                opacity: 0 !important;
+                animation: none !important;
+                display: none !important;
+            }
+
+            .bubble-container {
+                display: none !important;
+            }
+        }
+
+        /* actually let's keep them but reduce count via JS — we'll handle in script */
     </style>
 </head>
 
@@ -2393,22 +2431,15 @@
         </div>
 
         <div class="hero-content">
-            <div class="hero-badge">
-                <span class="dot"></span>
-                Premium Software Engineering
-            </div>
 
-            <h1>
-                Engineering <br />
-                <span class="highlight glow-pulse">Software</span> That<br />
-                Creates <span class="highlight glow-pulse">Worth.</span>
-            </h1>
-
+            <h1>We <span class="highlight glow-pulse">Dev</span>elop Technologies That Increase Your Business <span
+                    class="highlight glow-pulse">Worth</span></h1>
+            <br />
             <p>
                 We craft custom software, web &amp; mobile apps, AI solutions, and enterprise platforms — each built to
                 deliver real value.
             </p>
-
+            <br />
             <div class="hero-actions">
                 <a href="#contact" class="btn btn-primary"><span><i class="fas fa-rocket"></i> Start Your
                         Project</span></a>
@@ -2430,8 +2461,8 @@
     </section>
 
     <!-- ============================================================
-    ABOUT — Paragraph + Image
-    ============================================================ -->
+ABOUT — Paragraph + Image
+============================================================ -->
     <section id="about">
         <div class="container">
             <div class="text-center reveal">
@@ -2468,8 +2499,8 @@
     </section>
 
     <!-- ============================================================
-    SERVICES
-    ============================================================ -->
+SERVICES
+============================================================ -->
     <section id="services" style="background:var(--bg-page);">
         <div class="container">
             <div class="text-center reveal">
@@ -2538,8 +2569,8 @@
     </section>
 
     <!-- ============================================================
-    WHY DEVWORTH
-    ============================================================ -->
+WHY DEVWORTH
+============================================================ -->
     <section id="why" style="background:var(--bg-soft);">
         <div class="container">
             <div class="text-center reveal">
@@ -2585,8 +2616,8 @@
     </section>
 
     <!-- ============================================================
-    PROCESS
-    ============================================================ -->
+PROCESS
+============================================================ -->
     <section id="process">
         <div class="container">
             <div class="text-center reveal">
@@ -2657,8 +2688,8 @@
     </section>
 
     <!-- ============================================================
-    VISION
-    ============================================================ -->
+VISION
+============================================================ -->
     <section id="vision">
         <div class="container">
             <div class="text-center reveal">
@@ -2693,8 +2724,8 @@
     </section>
 
     <!-- ============================================================
-    TESTIMONIALS — Carousel
-    ============================================================ -->
+TESTIMONIALS — Carousel
+============================================================ -->
     <section id="testimonials">
         <div class="container">
             <div class="text-center reveal">
@@ -2767,8 +2798,8 @@
     </section>
 
     <!-- ============================================================
-    FAQ
-    ============================================================ -->
+FAQ
+============================================================ -->
     <section id="faq">
         <div class="container">
             <div class="text-center reveal">
@@ -2824,8 +2855,8 @@
     </section>
 
     <!-- ============================================================
-    CONTACT
-    ============================================================ -->
+CONTACT
+============================================================ -->
     <section id="contact">
         <div class="container">
             <div class="text-center reveal">
@@ -2865,7 +2896,7 @@
                             <div>
                                 <div class="label">Email</div>
                                 <div class="value"><a href="mailto:info@devworthtechonologies.
-                                    com">info@devworthtechonologies.com</a></div>
+                        com">info@devworthtechonologies.com</a></div>
                             </div>
                         </div>
                         <div class="item">
@@ -2875,13 +2906,6 @@
                                 <div class="value"><a href="tel:+919876543210">+91 9876543210</a></div>
                             </div>
                         </div>
-                        <!-- <div class="item">
-                            <div class="icon"><i class="fas fa-map-marker-alt"></i></div>
-                            <div>
-                                <div class="label">Address</div>
-                                <div class="value">San Francisco, CA</div>
-                            </div>
-                        </div> -->
                         <div class="item" style="border-bottom:none;">
                             <div class="icon"><i class="fas fa-share-alt"></i></div>
                             <div>
@@ -2900,22 +2924,14 @@
                             </div>
                         </div>
                     </div>
-
-                    <!-- <div class="map-box" style="margin-top:16px;">
-                        <img src="https://images.unsplash.com/photo-1523731407965-2430cd12f5e4?w=800&q=80" alt="Map"
-                            loading="lazy" />
-                        <div class="overlay">
-                            <i class="fas fa-map-pin"></i> San Francisco, CA
-                        </div>
-                    </div> -->
                 </div>
             </div>
         </div>
     </section>
 
     <!-- ============================================================
-    FOOTER — Dark
-    ============================================================ -->
+FOOTER — Dark
+============================================================ -->
     <footer class="footer">
         <div class="footer-divider"></div>
         <div class="inner">
@@ -2944,26 +2960,40 @@
         </div>
     </footer>
 
-    <!-- ============================================================
-    JAVASCRIPT
-    ============================================================ -->
+<!-- ============================================================
+JAVASCRIPT
+============================================================ -->
     <script>
         (function () {
             'use strict';
 
-            // ===== BUBBLES (Very Subtle) =====
+            // ===== BUBBLES — fixed: smooth fade, no "pop" reset, responsive =====
             (function createBubbles() {
                 const container = document.getElementById('bubbleContainer');
                 const colors = ['var(--blue-300)', 'var(--blue-400)', 'var(--blue-500)'];
-                for (let i = 0; i < 14; i++) {
+
+                // Determine bubble count based on screen width
+                let count = 14;
+                if (window.innerWidth < 480) count = 0;
+                else if (window.innerWidth < 768) count = 4;
+                else if (window.innerWidth < 1024) count = 8;
+
+                if (count === 0) {
+                    container.style.display = 'none';
+                    return;
+                }
+
+                for (let i = 0; i < count; i++) {
                     const bubble = document.createElement('div');
                     bubble.className = 'bubble';
-                    const size = 30 + Math.random() * 80;
+                    const size = 20 + Math.random() * 70;
                     bubble.style.width = size + 'px';
                     bubble.style.height = size + 'px';
                     bubble.style.left = Math.random() * 100 + '%';
-                    bubble.style.animationDuration = 18 + Math.random() * 28 + 's';
-                    bubble.style.animationDelay = Math.random() * 20 + 's';
+                    // Staggered durations for natural feel
+                    const dur = 18 + Math.random() * 28;
+                    bubble.style.animationDuration = dur + 's';
+                    bubble.style.animationDelay = (Math.random() * 20) + 's';
                     bubble.style.background =
                         `radial-gradient(circle at 30% 30%, ${colors[i % colors.length]}, var(--blue-500))`;
                     container.appendChild(bubble);
@@ -2976,7 +3006,6 @@
             const indicator = document.getElementById('timeIndicator');
             const html = document.documentElement;
 
-            // Auto theme based on time (6pm-6am dark, 6am-6pm light)
             function getAutoTheme() {
                 const hour = new Date().getHours();
                 return (hour >= 18 || hour < 6) ? 'dark' : 'light';
@@ -3006,7 +3035,6 @@
                 indicator.textContent = 'Manual';
             });
 
-            // Watch for time changes to auto-switch if not manual
             setInterval(function () {
                 if (!isManual) {
                     const auto = getAutoTheme();
@@ -3017,7 +3045,7 @@
                         icon.className = auto === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
                     }
                 }
-            }, 60000); // check every minute
+            }, 60000);
 
             // ===== PROGRESS BAR =====
             window.addEventListener('scroll', function () {

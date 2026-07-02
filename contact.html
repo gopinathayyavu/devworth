@@ -4,10 +4,10 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Careers — DevWorth | Join Our Team</title>
+    <title>Contact — DevWorth | Let's Build Something Great</title>
     <meta name="description"
-        content="Work at DevWorth Technologies. We're hiring engineers, designers, and product people who want to build software that creates worth." />
-    <link rel="canonical" href="https://devworth.tech/careers.html" />
+        content="Get in touch with DevWorth Technologies. We'd love to hear about your project and explore how we can help." />
+    <link rel="canonical" href="https://devworth.tech/contact.html" />
 
     <!-- Font Awesome 6 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
@@ -21,7 +21,7 @@
 
     <style>
         /* ============================================================
-           CSS VARIABLES — Light & Dark Themes
+           CSS VARIABLES — Light & Dark Themes (same as main)
            ============================================================ */
         :root {
             --blue-50: #f0f5ff;
@@ -738,9 +738,9 @@
         }
 
         /* ============================================================
-           CAREERS PAGE — Hero
+           CONTACT PAGE — Hero
            ============================================================ */
-        .careers-hero {
+        .contact-hero {
             min-height: 50vh;
             display: flex;
             align-items: center;
@@ -753,7 +753,7 @@
             overflow: hidden;
         }
 
-        .careers-hero::after {
+        .contact-hero::after {
             content: '';
             position: absolute;
             inset: 0;
@@ -761,15 +761,15 @@
             pointer-events: none;
         }
 
-        .careers-hero .hero-content {
+        .contact-hero .hero-content {
             position: relative;
             z-index: 2;
-            max-width: 750px;
+            max-width: 700px;
         }
 
-        .careers-hero h1 {
+        .contact-hero h1 {
             font-family: 'Playfair Display', serif;
-            font-size: clamp(40px, 5vw, 60px);
+            font-size: clamp(40px, 5vw, 56px);
             font-weight: 700;
             color: var(--text-primary);
             line-height: 1.1;
@@ -778,7 +778,7 @@
             animation: fadeInUp 0.8s ease forwards;
         }
 
-        .careers-hero h1 .highlight {
+        .contact-hero h1 .highlight {
             color: var(--blue-500);
             font-style: italic;
         }
@@ -794,10 +794,10 @@
             }
         }
 
-        .careers-hero p {
+        .contact-hero p {
             font-size: 18px;
             color: var(--text-secondary);
-            max-width: 550px;
+            max-width: 500px;
             margin: 0 auto;
             line-height: 1.7;
             transition: color 0.6s ease;
@@ -806,219 +806,323 @@
         }
 
         /* ============================================================
-           CAREERS PAGE — Why Work Here (Benefits)
+           CONTACT PAGE — Form & Info Grid
            ============================================================ */
-        .benefits-grid {
+        .contact-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-            gap: 24px;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
             margin-top: 48px;
         }
 
-        .benefit-item {
+        .contact-form-wrapper {
             background: var(--bg-card);
-            padding: 28px 20px;
-            border-radius: var(--radius-md);
+            padding: 32px 28px;
+            border-radius: var(--radius-lg);
             border: 1px solid var(--border-color);
-            text-align: center;
-            transition: all var(--transition);
             box-shadow: var(--shadow-sm);
+            transition: background 0.6s ease, border-color 0.6s ease;
         }
 
-        .benefit-item:hover {
-            transform: translateY(-6px);
-            box-shadow: var(--shadow-md);
-            border-color: rgba(11, 61, 255, 0.10);
+        .field {
+            margin-bottom: 16px;
         }
 
-        .benefit-item .icon {
-            font-size: 32px;
-            color: var(--blue-400);
+        .field label {
             display: block;
-            margin-bottom: 12px;
-            transition: transform 0.4s ease, color 0.4s ease;
-        }
-
-        .benefit-item:hover .icon {
-            transform: scale(1.1);
-            color: var(--blue-500);
-        }
-
-        .benefit-item h4 {
-            font-size: 17px;
-            font-weight: 700;
+            font-size: 13px;
+            font-weight: 600;
             color: var(--text-primary);
             margin-bottom: 4px;
-            transition: color 0.6s ease;
+            transition: color 0.4s ease;
         }
 
-        .benefit-item p {
-            font-size: 14px;
-            color: var(--text-secondary);
-            line-height: 1.6;
-            transition: color 0.6s ease;
-        }
-
-        /* ============================================================
-           CAREERS PAGE — Open Positions
-           ============================================================ */
-        .job-list {
-            display: flex;
-            flex-direction: column;
-            gap: 16px;
-            margin-top: 48px;
-            max-width: 800px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .job-item {
-            background: var(--bg-card);
+        .field input,
+        .field textarea {
+            width: 100%;
+            padding: 14px 18px;
             border: 1px solid var(--border-color);
-            border-radius: var(--radius-md);
-            padding: 20px 24px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 16px;
-            transition: all var(--transition);
-            box-shadow: var(--shadow-sm);
-        }
-
-        .job-item:hover {
-            transform: translateX(4px);
-            border-color: rgba(11, 61, 255, 0.12);
-            box-shadow: var(--shadow-md);
-        }
-
-        .job-item .info h4 {
-            font-size: 17px;
-            font-weight: 700;
+            border-radius: var(--radius-sm);
+            background: var(--bg-input);
             color: var(--text-primary);
-            transition: color 0.6s ease;
+            font-family: 'Inter', sans-serif;
+            font-size: 14px;
+            transition: all var(--transition-fast);
+            box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.02);
         }
 
-        .job-item .info .meta {
-            display: flex;
-            gap: 16px;
-            margin-top: 4px;
-            flex-wrap: wrap;
+        .field input:focus,
+        .field textarea:focus {
+            outline: none;
+            border-color: var(--blue-400);
+            box-shadow: 0 0 0 4px rgba(11, 61, 255, 0.06), inset 0 1px 3px rgba(0, 0, 0, 0.02);
         }
 
-        .job-item .info .meta span {
-            font-size: 13px;
+        .field input::placeholder,
+        .field textarea::placeholder {
             color: var(--text-light);
+            opacity: 0.7;
+        }
+
+        .field textarea {
+            resize: vertical;
+            min-height: 140px;
+        }
+
+        .btn-primary {
             display: inline-flex;
             align-items: center;
-            gap: 4px;
-        }
-
-        .job-item .info .meta span i {
-            color: var(--blue-400);
-            font-size: 12px;
-        }
-
-        .job-item .apply-btn {
+            justify-content: center;
+            gap: 10px;
+            padding: 14px 34px;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 14px;
             background: var(--blue-500);
             color: #fff;
             border: none;
-            padding: 8px 24px;
-            border-radius: 50px;
-            font-weight: 600;
-            font-size: 13px;
             cursor: pointer;
             transition: all var(--transition-fast);
             box-shadow: var(--shadow-glow);
+            position: relative;
+            overflow: hidden;
+            width: 100%;
             font-family: 'Inter', sans-serif;
-            flex-shrink: 0;
         }
 
-        .job-item .apply-btn:hover {
-            transform: scale(1.05);
-            box-shadow: 0 8px 24px rgba(11, 61, 255, 0.25);
+        .btn-primary::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, var(--blue-400), var(--blue-600));
+            opacity: 0;
+            transition: opacity 0.4s ease;
         }
 
-        /* ============================================================
-           CAREERS PAGE — Culture/Values (similar to about)
-           ============================================================ */
-        .culture-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
-            gap: 28px;
-            margin-top: 48px;
+        .btn-primary:hover::before {
+            opacity: 1;
         }
 
-        .culture-item {
+        .btn-primary:hover {
+            transform: translateY(-2px) scale(1.01);
+            box-shadow: 0 12px 40px rgba(11, 61, 255, 0.25);
+        }
+
+        .btn-primary span {
+            position: relative;
+            z-index: 2;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .btn-primary i {
+            font-size: 16px;
+            transition: transform 0.3s ease;
+        }
+
+        .btn-primary:hover i {
+            transform: translateX(3px) rotate(-5deg);
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .contact-info .item {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            padding: 16px 20px;
             background: var(--bg-card);
-            padding: 28px 24px;
-            border-radius: var(--radius-md);
+            border-radius: var(--radius-sm);
             border: 1px solid var(--border-color);
-            text-align: center;
-            transition: all var(--transition);
+            transition: all var(--transition-fast);
             box-shadow: var(--shadow-sm);
         }
 
-        .culture-item:hover {
-            transform: translateY(-6px);
-            box-shadow: var(--shadow-md);
+        .contact-info .item:hover {
             border-color: rgba(11, 61, 255, 0.10);
+            transform: translateX(4px);
+            box-shadow: var(--shadow-md);
         }
 
-        .culture-item .icon {
-            font-size: 28px;
-            color: var(--blue-400);
-            display: block;
-            margin-bottom: 10px;
-            transition: transform 0.4s ease, color 0.4s ease;
+        [data-theme="dark"] .contact-info .item:hover {
+            border-color: rgba(255, 255, 255, 0.06);
         }
 
-        .culture-item:hover .icon {
-            transform: scale(1.1);
+        .contact-info .item .icon {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            background: var(--blue-100);
+            color: var(--blue-500);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            font-size: 18px;
+            transition: background 0.4s ease, color 0.4s ease;
+        }
+
+        .contact-info .item .label {
+            font-size: 11px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            color: var(--text-light);
+            transition: color 0.4s ease;
+        }
+
+        .contact-info .item .value {
+            font-weight: 500;
+            color: var(--text-primary);
+            transition: color 0.4s ease;
+        }
+
+        .contact-info .item .value a {
+            color: var(--text-primary);
+            transition: color 0.3s ease;
+        }
+
+        .contact-info .item .value a:hover {
             color: var(--blue-500);
         }
 
-        .culture-item h4 {
+        .contact-info .item div[style*="display:flex"] a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            color: var(--text-secondary);
+            background: var(--bg-soft);
+            transition: all 0.3s ease;
             font-size: 17px;
-            font-weight: 700;
-            color: var(--text-primary);
-            margin-bottom: 4px;
-            transition: color 0.6s ease;
+            border: 1px solid transparent;
         }
 
-        .culture-item p {
-            font-size: 14px;
-            color: var(--text-secondary);
-            line-height: 1.7;
-            transition: color 0.6s ease;
+        .contact-info .item div[style*="display:flex"] a:hover {
+            color: #fff;
+            background: var(--blue-500);
+            transform: translateY(-2px) scale(1.05);
+            box-shadow: var(--shadow-glow);
+            border-color: var(--blue-500);
+        }
+
+        .map-box {
+            border-radius: var(--radius-sm);
+            overflow: hidden;
+            height: 200px;
+            position: relative;
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            margin-top: 16px;
+            transition: border-color 0.5s ease;
+        }
+
+        .map-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.5;
+            transition: opacity 0.5s ease;
+        }
+
+        .map-box .overlay {
+            position: absolute;
+            inset: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(2px);
+            font-weight: 500;
+            color: var(--text-primary);
+            gap: 8px;
+            transition: background 0.5s ease, color 0.5s ease;
+        }
+
+        [data-theme="dark"] .map-box .overlay {
+            background: rgba(10, 14, 26, 0.3);
+        }
+
+        .map-box .overlay i {
+            color: var(--blue-500);
+            font-size: 18px;
         }
 
         /* ============================================================
-           CAREERS PAGE — CTA
+           CONTACT PAGE — FAQ (optional)
            ============================================================ */
-        .careers-cta {
-            background: var(--bg-soft);
-            text-align: center;
-            padding: 80px 0;
-            transition: background 0.6s ease;
+        .faq-list {
+            max-width: 720px;
+            margin: 40px auto 0;
         }
 
-        .careers-cta h2 {
-            font-family: 'Playfair Display', serif;
-            font-size: clamp(30px, 3.5vw, 48px);
-            font-weight: 700;
-            color: var(--text-primary);
+        .faq-item {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-md);
             margin-bottom: 12px;
-            transition: color 0.6s ease;
+            overflow: hidden;
+            transition: all var(--transition-fast);
+            will-change: transform;
         }
 
-        .careers-cta p {
-            font-size: 17px;
+        .faq-item:hover {
+            border-color: rgba(11, 61, 255, 0.12);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .faq-toggle {
+            width: 100%;
+            padding: 20px 24px;
+            background: none;
+            border: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 15px;
+            font-weight: 600;
+            color: var(--text-primary);
+            cursor: pointer;
+            text-align: left;
+            gap: 16px;
+            transition: background var(--transition-fast);
+        }
+
+        .faq-toggle:hover {
+            background: rgba(11, 61, 255, 0.02);
+        }
+
+        .faq-toggle i {
+            color: var(--blue-400);
+            transition: transform var(--transition);
+            flex-shrink: 0;
+            font-size: 14px;
+        }
+
+        .faq-toggle i.open {
+            transform: rotate(180deg);
+        }
+
+        .faq-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+            padding: 0 24px;
             color: var(--text-secondary);
-            max-width: 500px;
-            margin: 0 auto 28px;
-            line-height: 1.7;
-            transition: color 0.6s ease;
+            font-size: 14px;
+            line-height: 1.8;
+        }
+
+        .faq-content.open {
+            max-height: 200px;
+            padding-bottom: 24px;
         }
 
         /* ============================================================
@@ -1123,47 +1227,23 @@
         /* ============================================================
            RESPONSIVE TWEAKS
            ============================================================ */
-        @media (max-width: 1024px) {
-            .culture-grid {
-                grid-template-columns: 1fr 1fr;
-            }
-        }
-
         @media (max-width: 768px) {
-            .careers-hero {
+            .contact-hero {
                 min-height: 40vh;
                 padding: 100px 20px 40px;
             }
 
-            .careers-hero h1 {
+            .contact-hero h1 {
                 font-size: 32px;
             }
 
-            .culture-grid {
+            .contact-grid {
                 grid-template-columns: 1fr;
+                gap: 28px;
             }
 
-            .benefits-grid {
-                grid-template-columns: 1fr 1fr;
-            }
-
-            .job-item {
-                flex-direction: column;
-                align-items: stretch;
-                text-align: center;
-            }
-
-            .job-item .info .meta {
-                justify-content: center;
-            }
-
-            .job-item .apply-btn {
-                width: 100%;
-                justify-content: center;
-            }
-
-            .careers-cta {
-                padding: 48px 0;
+            .contact-form-wrapper {
+                padding: 24px 20px;
             }
         }
 
@@ -1189,12 +1269,13 @@
                 font-size: 13px;
             }
 
-            .benefits-grid {
-                grid-template-columns: 1fr;
+            .contact-form-wrapper {
+                padding: 20px 16px;
             }
 
-            .job-item {
-                padding: 16px 18px;
+            .contact-info .item {
+                padding: 12px 16px;
+                gap: 12px;
             }
         }
     </style>
@@ -1228,7 +1309,7 @@
                 <a href="about.html">About</a>
                 <a href="services.html">Services</a>
                 <a href="projects.html">Projects</a>
-                <a href="careers.html" class="active">Careers</a>
+                <a href="careers.html">Careers</a>
                 <a href="contact.html">Contact</a>
                 <a href="contact.html" class="nav-cta">Start a Project</a>
             </nav>
@@ -1250,199 +1331,141 @@
     </div>
 
     <!-- ============================================================
-    CAREERS HERO
+    CONTACT HERO
     ============================================================ -->
-    <section class="careers-hero" id="careers-hero">
+    <section class="contact-hero" id="contact-hero">
         <div class="hero-content">
-            <h1>Join Our <span class="highlight">Team</span></h1>
+            <h1>Let's Build <span class="highlight">Something Great</span></h1>
             <p>
-                We're building a team of passionate engineers, designers, and problem‑solvers
-                who want to create software that truly matters. Come grow with us.
+                Have a project in mind? We'd love to hear from you. Reach out and let's explore how we can help you create software that delivers real worth.
             </p>
         </div>
     </section>
 
     <!-- ============================================================
-    BENEFITS
+    CONTACT FORM & INFO
     ============================================================ -->
-    <section id="benefits" style="background:var(--bg-page);">
+    <section id="contact-main" style="background:var(--bg-page);">
         <div class="container">
             <div class="text-center reveal">
-                <span class="section-label">Perks &amp; Benefits</span>
-                <h2 class="section-title">Why Work <span class="light">With Us</span></h2>
-                <p class="section-sub mx-auto">We invest in our people because great software is built by great teams.</p>
+                <span class="section-label">Get in Touch</span>
+                <h2 class="section-title">We're <span class="light">Ready</span></h2>
+                <p class="section-sub mx-auto">Fill out the form below or reach us directly — we'll get back to you within 24 hours.</p>
             </div>
 
-            <div class="benefits-grid stagger-children">
-                <div class="benefit-item">
-                    <span class="icon"><i class="fas fa-medal"></i></span>
-                    <h4>Competitive Pay</h4>
-                    <p>We offer salaries that reflect your skills and experience, plus performance bonuses.</p>
+            <div class="contact-grid">
+                <div class="reveal-left">
+                    <div class="contact-form-wrapper">
+                        <form id="contactForm">
+                            <div class="field">
+                                <label for="name">Full Name</label>
+                                <input type="text" id="name" placeholder="Your name" required />
+                            </div>
+                            <div class="field">
+                                <label for="email">Email Address</label>
+                                <input type="email" id="email" placeholder="you@company.com" required />
+                            </div>
+                            <div class="field">
+                                <label for="subject">Subject</label>
+                                <input type="text" id="subject" placeholder="What's this about?" />
+                            </div>
+                            <div class="field">
+                                <label for="message">Your Message</label>
+                                <textarea id="message" rows="5" placeholder="Tell us about your project..." required></textarea>
+                            </div>
+                            <button type="submit" class="btn-primary"><span><i class="fas fa-paper-plane"></i> Send Message</span></button>
+                        </form>
+                    </div>
                 </div>
-                <div class="benefit-item">
-                    <span class="icon"><i class="fas fa-home"></i></span>
-                    <h4>Remote First</h4>
-                    <p>Work from anywhere. We're a distributed team with flexible hours and async workflows.</p>
-                </div>
-                <div class="benefit-item">
-                    <span class="icon"><i class="fas fa-heart"></i></span>
-                    <h4>Health &amp; Wellness</h4>
-                    <p>Comprehensive health insurance, mental health days, and wellness stipends.</p>
-                </div>
-                <div class="benefit-item">
-                    <span class="icon"><i class="fas fa-book"></i></span>
-                    <h4>Learning Budget</h4>
-                    <p>Annual budget for courses, conferences, books, and anything that helps you grow.</p>
-                </div>
-                <div class="benefit-item">
-                    <span class="icon"><i class="fas fa-clock"></i></span>
-                    <h4>Flexible Hours</h4>
-                    <p>We trust you to manage your time. Work when you're most productive.</p>
-                </div>
-                <div class="benefit-item">
-                    <span class="icon"><i class="fas fa-chart-line"></i></span>
-                    <h4>Career Growth</h4>
-                    <p>Clear career progression paths and mentorship to help you advance.</p>
+
+                <div class="reveal-right">
+                    <div class="contact-info">
+                        <div class="item">
+                            <div class="icon"><i class="fas fa-envelope"></i></div>
+                            <div>
+                                <div class="label">Email</div>
+                                <div class="value"><a href="mailto:info@devworthtechonologies.com">info@devworthtechonologies.com</a></div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="icon"><i class="fas fa-phone-alt"></i></div>
+                            <div>
+                                <div class="label">Phone</div>
+                                <div class="value"><a href="tel:+919876543210">+91 9876543210</a></div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="icon"><i class="fas fa-map-marker-alt"></i></div>
+                            <div>
+                                <div class="label">Address</div>
+                                <div class="value">San Francisco, CA</div>
+                            </div>
+                        </div>
+                        <div class="item" style="border-bottom:none;">
+                            <div class="icon"><i class="fas fa-share-alt"></i></div>
+                            <div>
+                                <div class="label">Social</div>
+                                <div style="display:flex;gap:16px;margin-top:4px;">
+                                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                                    <a href="#"><i class="fab fa-github"></i></a>
+                                    <a href="#"><i class="fab fa-x-twitter"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Map placeholder -->
+                    <div class="map-box">
+                        <img src="https://images.unsplash.com/photo-1523731407965-2430cd12f5e4?w=800&q=80" alt="Map" loading="lazy" />
+                        <div class="overlay">
+                            <i class="fas fa-map-pin"></i> San Francisco, CA
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- ============================================================
-    OPEN POSITIONS
+    FAQ SECTION (optional)
     ============================================================ -->
-    <section id="jobs" style="background:var(--bg-soft);">
+    <section id="faq" style="background:var(--bg-soft);">
         <div class="container">
             <div class="text-center reveal">
-                <span class="section-label">Open Positions</span>
-                <h2 class="section-title">Join the <span class="light">Team</span></h2>
-                <p class="section-sub mx-auto">We're always looking for talented people who share our passion for quality software.</p>
+                <span class="section-label">FAQ</span>
+                <h2 class="section-title">Quick <span class="light">Answers</span></h2>
+                <p class="section-sub mx-auto">Find answers to the most common questions about working with us.</p>
             </div>
 
-            <div class="job-list stagger-children">
-                <!-- Job 1 -->
-                <div class="job-item">
-                    <div class="info">
-                        <h4>Senior Software Engineer</h4>
-                        <div class="meta">
-                            <span><i class="fas fa-map-pin"></i> Remote</span>
-                            <span><i class="fas fa-briefcase"></i> Full-time</span>
-                            <span><i class="fas fa-code"></i> Backend</span>
-                        </div>
-                    </div>
-                    <button class="apply-btn">Apply Now</button>
+            <div class="faq-list section-popdown">
+                <div class="faq-item">
+                    <button class="faq-toggle">
+                        <span>What types of projects do you take on?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-content">We handle everything from custom software and web applications to mobile apps, AI solutions, SaaS products, and enterprise systems. If it's software that creates worth, we're interested.</div>
                 </div>
-
-                <!-- Job 2 -->
-                <div class="job-item">
-                    <div class="info">
-                        <h4>Frontend Developer (React)</h4>
-                        <div class="meta">
-                            <span><i class="fas fa-map-pin"></i> Remote</span>
-                            <span><i class="fas fa-briefcase"></i> Full-time</span>
-                            <span><i class="fas fa-palette"></i> UI/UX</span>
-                        </div>
-                    </div>
-                    <button class="apply-btn">Apply Now</button>
+                <div class="faq-item">
+                    <button class="faq-toggle">
+                        <span>How much does a project cost?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-content">Every project is unique. We provide transparent estimates based on scope, complexity, and timeline. Contact us for a free consultation and we'll provide a detailed quote.</div>
                 </div>
-
-                <!-- Job 3 -->
-                <div class="job-item">
-                    <div class="info">
-                        <h4>Product Designer</h4>
-                        <div class="meta">
-                            <span><i class="fas fa-map-pin"></i> Remote</span>
-                            <span><i class="fas fa-briefcase"></i> Full-time</span>
-                            <span><i class="fas fa-pencil-ruler"></i> Design</span>
-                        </div>
-                    </div>
-                    <button class="apply-btn">Apply Now</button>
+                <div class="faq-item">
+                    <button class="faq-toggle">
+                        <span>How long does development take?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-content">Timelines vary depending on the project. We'll work with you to set realistic milestones and keep you updated throughout the process.</div>
                 </div>
-
-                <!-- Job 4 -->
-                <div class="job-item">
-                    <div class="info">
-                        <h4>DevOps Engineer</h4>
-                        <div class="meta">
-                            <span><i class="fas fa-map-pin"></i> Remote</span>
-                            <span><i class="fas fa-briefcase"></i> Full-time</span>
-                            <span><i class="fas fa-cloud"></i> Infrastructure</span>
-                        </div>
-                    </div>
-                    <button class="apply-btn">Apply Now</button>
+                <div class="faq-item">
+                    <button class="faq-toggle">
+                        <span>Do you offer ongoing support after launch?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-content">Absolutely. We believe in long-term partnerships and offer maintenance, updates, security patches, and continuous improvement.</div>
                 </div>
-
-                <!-- Job 5 -->
-                <div class="job-item">
-                    <div class="info">
-                        <h4>AI/ML Engineer</h4>
-                        <div class="meta">
-                            <span><i class="fas fa-map-pin"></i> Remote</span>
-                            <span><i class="fas fa-briefcase"></i> Full-time</span>
-                            <span><i class="fas fa-brain"></i> AI</span>
-                        </div>
-                    </div>
-                    <button class="apply-btn">Apply Now</button>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ============================================================
-    CULTURE (Values)
-    ============================================================ -->
-    <section id="culture" style="background:var(--bg-page);">
-        <div class="container">
-            <div class="text-center reveal">
-                <span class="section-label">Our Culture</span>
-                <h2 class="section-title">How We <span class="light">Work</span></h2>
-                <p class="section-sub mx-auto">We believe in transparency, collaboration, and continuous improvement.</p>
-            </div>
-
-            <div class="culture-grid stagger-children">
-                <div class="culture-item">
-                    <span class="icon"><i class="fas fa-handshake"></i></span>
-                    <h4>Trust &amp; Autonomy</h4>
-                    <p>We trust our team to make decisions and own their work. No micromanagement.</p>
-                </div>
-                <div class="culture-item">
-                    <span class="icon"><i class="fas fa-comments"></i></span>
-                    <h4>Open Communication</h4>
-                    <p>Regular syncs, transparent roadmaps, and direct access to leadership.</p>
-                </div>
-                <div class="culture-item">
-                    <span class="icon"><i class="fas fa-gem"></i></span>
-                    <h4>Quality First</h4>
-                    <p>We take pride in clean, well‑tested code and thoughtful design.</p>
-                </div>
-                <div class="culture-item">
-                    <span class="icon"><i class="fas fa-seedling"></i></span>
-                    <h4>Continuous Learning</h4>
-                    <p>We invest in each other through mentorship, sharing, and experimentation.</p>
-                </div>
-                <div class="culture-item">
-                    <span class="icon"><i class="fas fa-globe"></i></span>
-                    <h4>Inclusive &amp; Diverse</h4>
-                    <p>We welcome people from all backgrounds and perspectives.</p>
-                </div>
-                <div class="culture-item">
-                    <span class="icon"><i class="fas fa-star"></i></span>
-                    <h4>Celebrate Wins</h4>
-                    <p>We recognize achievements — big and small — as a team.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ============================================================
-    CTA
-    ============================================================ -->
-    <section class="careers-cta">
-        <div class="container">
-            <div class="reveal">
-                <h2>Ready to <span style="color:var(--blue-500);">Make an Impact</span>?</h2>
-                <p>If you don't see a role that fits, we'd still love to hear from you. Send us your resume and we'll reach out when something opens.</p>
-                <a href="contact.html" class="btn btn-primary"><span><i class="fas fa-envelope"></i> Send Your CV</span></a>
             </div>
         </div>
     </section>
@@ -1462,9 +1485,8 @@
                 <h4>Company</h4>
                 <ul>
                     <li><a href="about.html">About</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="projects.html">Projects</a></li>
-                    <li><a href="careers.html">Careers</a></li>
+                    <li><a href="index.html#services">Services</a></li>
+                    <li><a href="index.html#process">Process</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
             </div>
@@ -1606,6 +1628,21 @@
                 revealObserver.observe(el);
             });
 
+            // ===== FAQ ACCORDION =====
+            document.querySelectorAll('.faq-toggle').forEach(function(btn) {
+                btn.addEventListener('click', function() {
+                    const content = this.nextElementSibling;
+                    const icon = this.querySelector('i');
+                    const isOpen = content.classList.contains('open');
+                    document.querySelectorAll('.faq-content').forEach(function(c) { c.classList.remove('open'); });
+                    document.querySelectorAll('.faq-toggle i').forEach(function(i) { i.classList.remove('open'); });
+                    if (!isOpen) {
+                        content.classList.add('open');
+                        icon.classList.add('open');
+                    }
+                });
+            });
+
             // ===== SMOOTH SCROLL =====
             document.querySelectorAll('a[href^="#"]').forEach(function(a) {
                 a.addEventListener('click', function(e) {
@@ -1617,16 +1654,15 @@
                 });
             });
 
-            // ===== APPLY BUTTONS (simple alert) =====
-            document.querySelectorAll('.apply-btn').forEach(function(btn) {
-                btn.addEventListener('click', function() {
-                    const job = this.closest('.job-item').querySelector('h4').textContent;
-                    alert('Thank you for your interest in the "' + job + '" position. Please send your resume to careers@devworthtechonologies.com');
-                });
+            // ===== CONTACT FORM =====
+            document.getElementById('contactForm').addEventListener('submit', function(e) {
+                e.preventDefault();
+                alert('Thank you for your message! We\'ll get back to you soon.');
+                this.reset();
             });
 
             // ===== 3D CARD TILT =====
-            document.querySelectorAll('.benefit-item, .culture-item, .job-item, .careers-cta .btn').forEach(function(card) {
+            document.querySelectorAll('.contact-info .item, .faq-item').forEach(function(card) {
                 card.addEventListener('mousemove', function(e) {
                     const rect = this.getBoundingClientRect();
                     const x = (e.clientX - rect.left) / rect.width - 0.5;

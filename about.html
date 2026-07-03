@@ -117,6 +117,28 @@
             max-width: 100%;
         }
 
+        .logo img {
+            max-height: 36px;
+            width: auto;
+            max-width: 140px;
+            object-fit: contain;
+            transition: transform 0.3s ease;
+        }
+
+        .logo:hover img {
+            transform: scale(1.05);
+        }
+
+        .logo i {
+            color: var(--blue-500);
+            font-size: 20px;
+            transition: transform 0.4s ease;
+        }
+
+        .logo:hover i {
+            transform: rotate(-10deg) scale(1.1);
+        }
+
         ul {
             list-style: none;
         }
@@ -1271,12 +1293,15 @@
     ============================================================ -->
     <header class="navbar" id="navbar">
         <div class="inner">
-            <a href="index.html" class="logo"><i class="fas fa-gem"></i> DevWorth</a>
+            <a href="#" class="logo">
+                <img src="assets/Devworth Technologies-lg.png" alt="DevWorth Technologies">
+                DevWorth Technologies
+            </a>
             <nav class="nav-links">
                 <a href="index.html">Home</a>
-                <a href="about.html" class="active">About</a>
+                <a href="about.html">About</a>
                 <a href="services.html">Services</a>
-                <a href="projects.html">Projects</a>
+                <a href="projects.html" class="active">Projects</a>
                 <a href="careers.html">Careers</a>
                 <a href="contact.html">Contact</a>
                 <a href="contact.html" class="nav-cta">Start a Project</a>
@@ -1291,7 +1316,7 @@
     <div class="mobile-menu" id="mobileMenu">
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
-        <a href="service.html">Services</a>
+        <a href="services.html">Services</a>
         <a href="projects.html">Projects</a>
         <a href="careers.html">Careers</a>
         <a href="contact.html">Contact</a>
@@ -1489,25 +1514,33 @@
         <div class="footer-divider"></div>
         <div class="inner">
             <div>
-                <a href="index.html" class="logo"><i class="fas fa-gem"></i> DevWorth</a>
+                <a href="#" class="logo">
+                    <img src="assets/Devworth Technologies-lg.png" alt="DevWorth Technologies">
+                    DevWorth Technologies
+                </a>
                 <p>Engineering software that creates worth. We build custom solutions that deliver real value.</p>
                 <div class="copy">© 2026 DevWorth Technologies. All rights reserved.</div>
             </div>
             <div>
                 <h4>Company</h4>
                 <ul>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="index.html#services">Services</a></li>
-                    <li><a href="index.html#process">Process</a></li>
-                    <li><a href="index.html#contact">Contact</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#process">Process</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
             </div>
             <div>
                 <h4>Social</h4>
-                <ul class="social">
-                    <li><a href="#"><i class="fab fa-linkedin-in"></i> LinkedIn</a></li>
-                    <li><a href="#"><i class="fab fa-github"></i> GitHub</a></li>
-                    <li><a href="#"><i class="fab fa-x-twitter"></i> X</a></li>
+                <ul>
+                    <li><a href="https://www.linkedin.com/company/devworth-technologies" target="_blank"
+                            rel="noopener noreferrer"><i class="fab fa-linkedin-in"></i> LinkedIn</a></li>
+                    <li><a href="https://wa.me/+916374426001" target="_blank" rel="noopener noreferrer"><i
+                                class="fab fa-whatsapp"></i> WhatsApp</a></li>
+                    <li><a href="https://www.facebook.com/yourpage" target="_blank" rel="noopener noreferrer"><i
+                                class="fab fa-facebook-f"></i> Facebook</a></li>
+                    <li><a href="https://www.instagram.com/devworth_technologies/" target="_blank"
+                            rel="noopener noreferrer"><i class="fab fa-instagram"></i> Instagram</a></li>
                 </ul>
             </div>
         </div>

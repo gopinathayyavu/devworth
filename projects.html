@@ -117,6 +117,40 @@
             max-width: 100%;
         }
 
+        .logo {
+            font-size: 20px;
+            font-weight: 800;
+            letter-spacing: -0.02em;
+            color: var(--text-primary);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            transition: color 0.6s ease;
+            flex-shrink: 0;
+        }
+
+        .logo img {
+            max-height: 36px;
+            width: auto;
+            max-width: 140px;
+            object-fit: contain;
+            transition: transform 0.3s ease;
+        }
+
+        .logo:hover img {
+            transform: scale(1.05);
+        }
+
+        .logo i {
+            color: var(--blue-500);
+            font-size: 20px;
+            transition: transform 0.4s ease;
+        }
+
+        .logo:hover i {
+            transform: rotate(-10deg) scale(1.1);
+        }
+
         ul {
             list-style: none;
         }
@@ -163,13 +197,16 @@
                 transform: translateY(0) scale(0.6) rotate(0deg);
                 opacity: 0;
             }
+
             8% {
                 opacity: var(--bubble-opacity);
                 transform: translateY(0) scale(0.8) rotate(5deg);
             }
+
             85% {
                 opacity: calc(var(--bubble-opacity) * 1.8);
             }
+
             100% {
                 transform: translateY(-115vh) scale(0.2) rotate(720deg);
                 opacity: 0;
@@ -813,6 +850,7 @@
                 opacity: 0;
                 transform: translateY(30px);
             }
+
             to {
                 opacity: 1;
                 transform: translateY(0);
@@ -1189,7 +1227,10 @@
     ============================================================ -->
     <header class="navbar" id="navbar">
         <div class="inner">
-            <a href="index.html" class="logo"><i class="fas fa-gem"></i> DevWorth</a>
+            <a href="#" class="logo">
+                <img src="assets/Devworth Technologies-lg.png" alt="DevWorth Technologies">
+                DevWorth Technologies
+            </a>
             <nav class="nav-links">
                 <a href="index.html">Home</a>
                 <a href="about.html">About</a>
@@ -1237,7 +1278,8 @@
             <div class="text-center reveal">
                 <span class="section-label">Portfolio</span>
                 <h2 class="section-title">Featured <span class="light">Projects</span></h2>
-                <p class="section-sub mx-auto">Every project is crafted with care, built to scale, and delivered with transparency.</p>
+                <p class="section-sub mx-auto">Every project is crafted with care, built to scale, and delivered with
+                    transparency.</p>
             </div>
 
             <!-- Filter Bar (optional interactive filter) -->
@@ -1253,7 +1295,8 @@
             <div class="projects-grid stagger-children" id="projectGrid">
                 <!-- Project 1 -->
                 <div class="project-card" data-category="web">
-                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&q=80" alt="Project" class="image" loading="lazy" />
+                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&q=80" alt="Project"
+                        class="image" loading="lazy" />
                     <div class="body">
                         <div class="tags">
                             <span>React</span>
@@ -1261,14 +1304,16 @@
                             <span>PostgreSQL</span>
                         </div>
                         <h3>E‑Commerce Platform</h3>
-                        <p>High‑performance online store with real‑time inventory, AI‑powered recommendations, and seamless checkout.</p>
+                        <p>High‑performance online store with real‑time inventory, AI‑powered recommendations, and
+                            seamless checkout.</p>
                         <a href="#" class="link">View Case Study <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
 
                 <!-- Project 2 -->
                 <div class="project-card" data-category="mobile">
-                    <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=600&q=80" alt="Project" class="image" loading="lazy" />
+                    <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=600&q=80" alt="Project"
+                        class="image" loading="lazy" />
                     <div class="body">
                         <div class="tags">
                             <span>React Native</span>
@@ -1276,14 +1321,16 @@
                             <span>GraphQL</span>
                         </div>
                         <h3>Health & Fitness App</h3>
-                        <p>Cross‑platform mobile app with personalized workouts, nutrition tracking, and real‑time progress analytics.</p>
+                        <p>Cross‑platform mobile app with personalized workouts, nutrition tracking, and real‑time
+                            progress analytics.</p>
                         <a href="#" class="link">View Case Study <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
 
                 <!-- Project 3 -->
                 <div class="project-card" data-category="ai">
-                    <img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=600&q=80" alt="Project" class="image" loading="lazy" />
+                    <img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=600&q=80" alt="Project"
+                        class="image" loading="lazy" />
                     <div class="body">
                         <div class="tags">
                             <span>Python</span>
@@ -1291,14 +1338,16 @@
                             <span>FastAPI</span>
                         </div>
                         <h3>Predictive Maintenance</h3>
-                        <p>ML‑based system that predicts equipment failures, reducing downtime by 40% for industrial clients.</p>
+                        <p>ML‑based system that predicts equipment failures, reducing downtime by 40% for industrial
+                            clients.</p>
                         <a href="#" class="link">View Case Study <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
 
                 <!-- Project 4 -->
                 <div class="project-card" data-category="saas">
-                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&q=80" alt="Project" class="image" loading="lazy" />
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&q=80" alt="Project"
+                        class="image" loading="lazy" />
                     <div class="body">
                         <div class="tags">
                             <span>Vue.js</span>
@@ -1313,7 +1362,8 @@
 
                 <!-- Project 5 -->
                 <div class="project-card" data-category="web">
-                    <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=600&q=80" alt="Project" class="image" loading="lazy" />
+                    <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=600&q=80" alt="Project"
+                        class="image" loading="lazy" />
                     <div class="body">
                         <div class="tags">
                             <span>Angular</span>
@@ -1321,14 +1371,16 @@
                             <span>Azure</span>
                         </div>
                         <h3>Enterprise Dashboard</h3>
-                        <p>Real‑time operational dashboard for logistics companies, tracking fleet, shipments, and KPIs.</p>
+                        <p>Real‑time operational dashboard for logistics companies, tracking fleet, shipments, and KPIs.
+                        </p>
                         <a href="#" class="link">View Case Study <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
 
                 <!-- Project 6 -->
                 <div class="project-card" data-category="ai">
-                    <img src="https://images.unsplash.com/photo-1535378917042-10a22c95931a?w=600&q=80" alt="Project" class="image" loading="lazy" />
+                    <img src="https://images.unsplash.com/photo-1535378917042-10a22c95931a?w=600&q=80" alt="Project"
+                        class="image" loading="lazy" />
                     <div class="body">
                         <div class="tags">
                             <span>NLP</span>
@@ -1336,7 +1388,8 @@
                             <span>Docker</span>
                         </div>
                         <h3>Customer Sentiment Engine</h3>
-                        <p>AI‑powered sentiment analysis for social media and reviews, providing actionable insights for brands.</p>
+                        <p>AI‑powered sentiment analysis for social media and reviews, providing actionable insights for
+                            brands.</p>
                         <a href="#" class="link">View Case Study <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
@@ -1352,7 +1405,8 @@
             <div class="reveal">
                 <h2>Have a <span style="color:var(--blue-500);">Project</span> in Mind?</h2>
                 <p>Let's turn your idea into reality. We're ready to build something remarkable together.</p>
-                <a href="contact.html" class="btn btn-primary"><span><i class="fas fa-paper-plane"></i> Start a Project</span></a>
+                <a href="contact.html" class="btn btn-primary"><span><i class="fas fa-paper-plane"></i> Start a
+                        Project</span></a>
             </div>
         </div>
     </section>
@@ -1364,25 +1418,33 @@
         <div class="footer-divider"></div>
         <div class="inner">
             <div>
-                <a href="index.html" class="logo"><i class="fas fa-gem"></i> DevWorth</a>
+                <a href="#" class="logo">
+                    <img src="assets/Devworth Technologies-lg.png" alt="DevWorth Technologies">
+                    DevWorth Technologies
+                </a>
                 <p>Engineering software that creates worth. We build custom solutions that deliver real value.</p>
                 <div class="copy">© 2026 DevWorth Technologies. All rights reserved.</div>
             </div>
             <div>
                 <h4>Company</h4>
                 <ul>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="projects.html">Projects</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#process">Process</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
             </div>
             <div>
                 <h4>Social</h4>
-                <ul class="social">
-                    <li><a href="#"><i class="fab fa-linkedin-in"></i> LinkedIn</a></li>
-                    <li><a href="#"><i class="fab fa-github"></i> GitHub</a></li>
-                    <li><a href="#"><i class="fab fa-x-twitter"></i> X</a></li>
+                <ul>
+                    <li><a href="https://www.linkedin.com/company/devworth-technologies" target="_blank"
+                            rel="noopener noreferrer"><i class="fab fa-linkedin-in"></i> LinkedIn</a></li>
+                    <li><a href="https://wa.me/+916374426001" target="_blank" rel="noopener noreferrer"><i
+                                class="fab fa-whatsapp"></i> WhatsApp</a></li>
+                    <li><a href="https://www.facebook.com/yourpage" target="_blank" rel="noopener noreferrer"><i
+                                class="fab fa-facebook-f"></i> Facebook</a></li>
+                    <li><a href="https://www.instagram.com/devworth_technologies/" target="_blank"
+                            rel="noopener noreferrer"><i class="fab fa-instagram"></i> Instagram</a></li>
                 </ul>
             </div>
         </div>
@@ -1392,7 +1454,7 @@
     JAVASCRIPT
     ============================================================ -->
     <script>
-        (function() {
+        (function () {
             'use strict';
 
             // ===== BUBBLES =====
@@ -1443,7 +1505,7 @@
             icon.className = currentTheme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
             indicator.textContent = isManual ? 'Manual' : 'Auto';
 
-            toggle.addEventListener('click', function() {
+            toggle.addEventListener('click', function () {
                 const current = html.getAttribute('data-theme');
                 const next = current === 'light' ? 'dark' : 'light';
                 html.setAttribute('data-theme', next);
@@ -1454,7 +1516,7 @@
                 indicator.textContent = 'Manual';
             });
 
-            setInterval(function() {
+            setInterval(function () {
                 if (!isManual) {
                     const auto = getAutoTheme();
                     const current = html.getAttribute('data-theme');
@@ -1467,7 +1529,7 @@
             }, 60000);
 
             // ===== PROGRESS BAR =====
-            window.addEventListener('scroll', function() {
+            window.addEventListener('scroll', function () {
                 const scrollTop = window.pageYOffset;
                 const docHeight = document.documentElement.scrollHeight - window.innerHeight;
                 document.getElementById('progressBar').style.width = (scrollTop / docHeight) * 100 + '%';
@@ -1475,19 +1537,19 @@
 
             // ===== NAVBAR SCROLL =====
             const navbar = document.getElementById('navbar');
-            window.addEventListener('scroll', function() {
+            window.addEventListener('scroll', function () {
                 navbar.classList.toggle('scrolled', window.pageYOffset > 50);
             });
 
             // ===== MOBILE MENU =====
             const toggleBtn = document.getElementById('navToggle');
             const menu = document.getElementById('mobileMenu');
-            toggleBtn.addEventListener('click', function() {
+            toggleBtn.addEventListener('click', function () {
                 menu.classList.toggle('open');
                 toggleBtn.setAttribute('aria-expanded', menu.classList.contains('open'));
             });
-            menu.querySelectorAll('a').forEach(function(link) {
-                link.addEventListener('click', function() {
+            menu.querySelectorAll('a').forEach(function (link) {
+                link.addEventListener('click', function () {
                     menu.classList.remove('open');
                     toggleBtn.setAttribute('aria-expanded', 'false');
                 });
@@ -1498,8 +1560,8 @@
                 '.reveal, .reveal-left, .reveal-right, .stagger-children, .section-popup, .section-popdown'
             );
 
-            const revealObserver = new IntersectionObserver(function(entries) {
-                entries.forEach(function(entry) {
+            const revealObserver = new IntersectionObserver(function (entries) {
+                entries.forEach(function (entry) {
                     if (entry.isIntersecting) {
                         entry.target.classList.add('visible');
                     } else {
@@ -1511,7 +1573,7 @@
                 rootMargin: '0px 0px -30px 0px'
             });
 
-            revealEls.forEach(function(el) {
+            revealEls.forEach(function (el) {
                 revealObserver.observe(el);
             });
 
@@ -1519,15 +1581,15 @@
             const filterButtons = document.querySelectorAll('.filter-btn');
             const projectCards = document.querySelectorAll('.project-card');
 
-            filterButtons.forEach(function(btn) {
-                btn.addEventListener('click', function() {
+            filterButtons.forEach(function (btn) {
+                btn.addEventListener('click', function () {
                     // update active button
-                    filterButtons.forEach(function(b) { b.classList.remove('active'); });
+                    filterButtons.forEach(function (b) { b.classList.remove('active'); });
                     this.classList.add('active');
 
                     const filter = this.dataset.filter;
 
-                    projectCards.forEach(function(card) {
+                    projectCards.forEach(function (card) {
                         if (filter === 'all' || card.dataset.category === filter) {
                             card.style.display = 'flex';
                         } else {
@@ -1538,8 +1600,8 @@
             });
 
             // ===== SMOOTH SCROLL =====
-            document.querySelectorAll('a[href^="#"]').forEach(function(a) {
-                a.addEventListener('click', function(e) {
+            document.querySelectorAll('a[href^="#"]').forEach(function (a) {
+                a.addEventListener('click', function (e) {
                     e.preventDefault();
                     const target = document.querySelector(this.getAttribute('href'));
                     if (target) {
@@ -1549,8 +1611,8 @@
             });
 
             // ===== 3D CARD TILT =====
-            document.querySelectorAll('.project-card, .projects-cta .btn').forEach(function(card) {
-                card.addEventListener('mousemove', function(e) {
+            document.querySelectorAll('.project-card, .projects-cta .btn').forEach(function (card) {
+                card.addEventListener('mousemove', function (e) {
                     const rect = this.getBoundingClientRect();
                     const x = (e.clientX - rect.left) / rect.width - 0.5;
                     const y = (e.clientY - rect.top) / rect.height - 0.5;
@@ -1560,7 +1622,7 @@
                         'translateY(-4px) rotateX(' + rotX + 'deg) rotateY(' + rotY + 'deg)';
                     this.style.transition = 'transform 0.05s ease';
                 });
-                card.addEventListener('mouseleave', function() {
+                card.addEventListener('mouseleave', function () {
                     this.style.transform = 'translateY(0) rotateX(0) rotateY(0)';
                     this.style.transition = 'transform 0.5s cubic-bezier(0.22, 1, 0.36, 1)';
                 });

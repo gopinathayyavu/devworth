@@ -117,6 +117,28 @@
             max-width: 100%;
         }
 
+        .logo img {
+            max-height: 36px;
+            width: auto;
+            max-width: 140px;
+            object-fit: contain;
+            transition: transform 0.3s ease;
+        }
+
+        .logo:hover img {
+            transform: scale(1.05);
+        }
+
+        .logo i {
+            color: var(--blue-500);
+            font-size: 20px;
+            transition: transform 0.4s ease;
+        }
+
+        .logo:hover i {
+            transform: rotate(-10deg) scale(1.1);
+        }
+
         ul {
             list-style: none;
         }
@@ -163,13 +185,16 @@
                 transform: translateY(0) scale(0.6) rotate(0deg);
                 opacity: 0;
             }
+
             8% {
                 opacity: var(--bubble-opacity);
                 transform: translateY(0) scale(0.8) rotate(5deg);
             }
+
             85% {
                 opacity: calc(var(--bubble-opacity) * 1.8);
             }
+
             100% {
                 transform: translateY(-115vh) scale(0.2) rotate(720deg);
                 opacity: 0;
@@ -788,6 +813,7 @@
                 opacity: 0;
                 transform: translateY(30px);
             }
+
             to {
                 opacity: 1;
                 transform: translateY(0);
@@ -1303,14 +1329,17 @@
     ============================================================ -->
     <header class="navbar" id="navbar">
         <div class="inner">
-            <a href="index.html" class="logo"><i class="fas fa-gem"></i> DevWorth</a>
+            <a href="#" class="logo">
+                <img src="assets/Devworth Technologies-lg.png" alt="DevWorth Technologies">
+                DevWorth Technologies
+            </a>
             <nav class="nav-links">
                 <a href="index.html">Home</a>
                 <a href="about.html">About</a>
                 <a href="services.html">Services</a>
                 <a href="projects.html">Projects</a>
                 <a href="careers.html">Careers</a>
-                <a href="contact.html">Contact</a>
+                <a href="contact.html" class="active">Contact</a>
                 <a href="contact.html" class="nav-cta">Start a Project</a>
             </nav>
             <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
@@ -1337,7 +1366,8 @@
         <div class="hero-content">
             <h1>Let's Build <span class="highlight">Something Great</span></h1>
             <p>
-                Have a project in mind? We'd love to hear from you. Reach out and let's explore how we can help you create software that delivers real worth.
+                Have a project in mind? We'd love to hear from you. Reach out and let's explore how we can help you
+                create software that delivers real worth.
             </p>
         </div>
     </section>
@@ -1350,7 +1380,8 @@
             <div class="text-center reveal">
                 <span class="section-label">Get in Touch</span>
                 <h2 class="section-title">We're <span class="light">Ready</span></h2>
-                <p class="section-sub mx-auto">Fill out the form below or reach us directly — we'll get back to you within 24 hours.</p>
+                <p class="section-sub mx-auto">Fill out the form below or reach us directly — we'll get back to you
+                    within 24 hours.</p>
             </div>
 
             <div class="contact-grid">
@@ -1371,9 +1402,11 @@
                             </div>
                             <div class="field">
                                 <label for="message">Your Message</label>
-                                <textarea id="message" rows="5" placeholder="Tell us about your project..." required></textarea>
+                                <textarea id="message" rows="5" placeholder="Tell us about your project..."
+                                    required></textarea>
                             </div>
-                            <button type="submit" class="btn-primary"><span><i class="fas fa-paper-plane"></i> Send Message</span></button>
+                            <button type="submit" class="btn-primary"><span><i class="fas fa-paper-plane"></i> Send
+                                    Message</span></button>
                         </form>
                     </div>
                 </div>
@@ -1384,21 +1417,23 @@
                             <div class="icon"><i class="fas fa-envelope"></i></div>
                             <div>
                                 <div class="label">Email</div>
-                                <div class="value"><a href="mailto:info@devworthtechonologies.com">info@devworthtechonologies.com</a></div>
+                                <div class="value"><a
+                                        href="mailto:info@devworthtechonologies.com">info@devworthtechonologies.com</a>
+                                </div>
                             </div>
                         </div>
                         <div class="item">
                             <div class="icon"><i class="fas fa-phone-alt"></i></div>
                             <div>
                                 <div class="label">Phone</div>
-                                <div class="value"><a href="tel:+919876543210">+91 9876543210</a></div>
+                                <div class="value"><a href="tel:+916374426001">+91 6374426001</a></div>
                             </div>
                         </div>
                         <div class="item">
                             <div class="icon"><i class="fas fa-map-marker-alt"></i></div>
                             <div>
                                 <div class="label">Address</div>
-                                <div class="value">San Francisco, CA</div>
+                                <div class="value">Chennai, Tamil Nadu</div>
                             </div>
                         </div>
                         <div class="item" style="border-bottom:none;">
@@ -1406,9 +1441,17 @@
                             <div>
                                 <div class="label">Social</div>
                                 <div style="display:flex;gap:16px;margin-top:4px;">
-                                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                                    <a href="#"><i class="fab fa-github"></i></a>
-                                    <a href="#"><i class="fab fa-x-twitter"></i></a>
+                                    <a href="https://www.linkedin.com/company/devworth-technologies/" target="_blank"
+                                        rel="noopener noreferrer" aria-label="LinkedIn"><i
+                                            class="fab fa-linkedin-in"></i></a>
+                                    <a href="https://wa.me/+916374426001" target="_blank" rel="noopener noreferrer"
+                                        aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                                    <a href="https://www.facebook.com/yourpage" target="_blank"
+                                        rel="noopener noreferrer" aria-label="Facebook"><i
+                                            class="fab fa-facebook-f"></i></a>
+                                    <a href="https://www.instagram.com/devworth_technologies/" target="_blank"
+                                        rel="noopener noreferrer" aria-label="Instagram"><i
+                                            class="fab fa-instagram"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -1416,7 +1459,8 @@
 
                     <!-- Map placeholder -->
                     <div class="map-box">
-                        <img src="https://images.unsplash.com/photo-1523731407965-2430cd12f5e4?w=800&q=80" alt="Map" loading="lazy" />
+                        <img src="https://images.unsplash.com/photo-1523731407965-2430cd12f5e4?w=800&q=80" alt="Map"
+                            loading="lazy" />
                         <div class="overlay">
                             <i class="fas fa-map-pin"></i> San Francisco, CA
                         </div>
@@ -1443,28 +1487,34 @@
                         <span>What types of projects do you take on?</span>
                         <i class="fas fa-chevron-down"></i>
                     </button>
-                    <div class="faq-content">We handle everything from custom software and web applications to mobile apps, AI solutions, SaaS products, and enterprise systems. If it's software that creates worth, we're interested.</div>
+                    <div class="faq-content">We handle everything from custom software and web applications to mobile
+                        apps, AI solutions, SaaS products, and enterprise systems. If it's software that creates worth,
+                        we're interested.</div>
                 </div>
                 <div class="faq-item">
                     <button class="faq-toggle">
                         <span>How much does a project cost?</span>
                         <i class="fas fa-chevron-down"></i>
                     </button>
-                    <div class="faq-content">Every project is unique. We provide transparent estimates based on scope, complexity, and timeline. Contact us for a free consultation and we'll provide a detailed quote.</div>
+                    <div class="faq-content">Every project is unique. We provide transparent estimates based on scope,
+                        complexity, and timeline. Contact us for a free consultation and we'll provide a detailed quote.
+                    </div>
                 </div>
                 <div class="faq-item">
                     <button class="faq-toggle">
                         <span>How long does development take?</span>
                         <i class="fas fa-chevron-down"></i>
                     </button>
-                    <div class="faq-content">Timelines vary depending on the project. We'll work with you to set realistic milestones and keep you updated throughout the process.</div>
+                    <div class="faq-content">Timelines vary depending on the project. We'll work with you to set
+                        realistic milestones and keep you updated throughout the process.</div>
                 </div>
                 <div class="faq-item">
                     <button class="faq-toggle">
                         <span>Do you offer ongoing support after launch?</span>
                         <i class="fas fa-chevron-down"></i>
                     </button>
-                    <div class="faq-content">Absolutely. We believe in long-term partnerships and offer maintenance, updates, security patches, and continuous improvement.</div>
+                    <div class="faq-content">Absolutely. We believe in long-term partnerships and offer maintenance,
+                        updates, security patches, and continuous improvement.</div>
                 </div>
             </div>
         </div>
@@ -1477,25 +1527,33 @@
         <div class="footer-divider"></div>
         <div class="inner">
             <div>
-                <a href="index.html" class="logo"><i class="fas fa-gem"></i> DevWorth</a>
+                <a href="#" class="logo">
+                    <img src="assets/Devworth Technologies-lg.png" alt="DevWorth Technologies">
+                    DevWorth Technologies
+                </a>
                 <p>Engineering software that creates worth. We build custom solutions that deliver real value.</p>
                 <div class="copy">© 2026 DevWorth Technologies. All rights reserved.</div>
             </div>
             <div>
                 <h4>Company</h4>
                 <ul>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="index.html#services">Services</a></li>
-                    <li><a href="index.html#process">Process</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#process">Process</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
             </div>
             <div>
                 <h4>Social</h4>
-                <ul class="social">
-                    <li><a href="#"><i class="fab fa-linkedin-in"></i> LinkedIn</a></li>
-                    <li><a href="#"><i class="fab fa-github"></i> GitHub</a></li>
-                    <li><a href="#"><i class="fab fa-x-twitter"></i> X</a></li>
+                <ul>
+                    <li><a href="https://www.linkedin.com/company/devworth-technologies" target="_blank"
+                            rel="noopener noreferrer"><i class="fab fa-linkedin-in"></i> LinkedIn</a></li>
+                    <li><a href="https://wa.me/+916374426001" target="_blank" rel="noopener noreferrer"><i
+                                class="fab fa-whatsapp"></i> WhatsApp</a></li>
+                    <li><a href="https://www.facebook.com/yourpage" target="_blank" rel="noopener noreferrer"><i
+                                class="fab fa-facebook-f"></i> Facebook</a></li>
+                    <li><a href="https://www.instagram.com/devworth_technologies/" target="_blank"
+                            rel="noopener noreferrer"><i class="fab fa-instagram"></i> Instagram</a></li>
                 </ul>
             </div>
         </div>
@@ -1505,7 +1563,7 @@
     JAVASCRIPT
     ============================================================ -->
     <script>
-        (function() {
+        (function () {
             'use strict';
 
             // ===== BUBBLES =====
@@ -1556,7 +1614,7 @@
             icon.className = currentTheme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
             indicator.textContent = isManual ? 'Manual' : 'Auto';
 
-            toggle.addEventListener('click', function() {
+            toggle.addEventListener('click', function () {
                 const current = html.getAttribute('data-theme');
                 const next = current === 'light' ? 'dark' : 'light';
                 html.setAttribute('data-theme', next);
@@ -1567,7 +1625,7 @@
                 indicator.textContent = 'Manual';
             });
 
-            setInterval(function() {
+            setInterval(function () {
                 if (!isManual) {
                     const auto = getAutoTheme();
                     const current = html.getAttribute('data-theme');
@@ -1580,7 +1638,7 @@
             }, 60000);
 
             // ===== PROGRESS BAR =====
-            window.addEventListener('scroll', function() {
+            window.addEventListener('scroll', function () {
                 const scrollTop = window.pageYOffset;
                 const docHeight = document.documentElement.scrollHeight - window.innerHeight;
                 document.getElementById('progressBar').style.width = (scrollTop / docHeight) * 100 + '%';
@@ -1588,19 +1646,19 @@
 
             // ===== NAVBAR SCROLL =====
             const navbar = document.getElementById('navbar');
-            window.addEventListener('scroll', function() {
+            window.addEventListener('scroll', function () {
                 navbar.classList.toggle('scrolled', window.pageYOffset > 50);
             });
 
             // ===== MOBILE MENU =====
             const toggleBtn = document.getElementById('navToggle');
             const menu = document.getElementById('mobileMenu');
-            toggleBtn.addEventListener('click', function() {
+            toggleBtn.addEventListener('click', function () {
                 menu.classList.toggle('open');
                 toggleBtn.setAttribute('aria-expanded', menu.classList.contains('open'));
             });
-            menu.querySelectorAll('a').forEach(function(link) {
-                link.addEventListener('click', function() {
+            menu.querySelectorAll('a').forEach(function (link) {
+                link.addEventListener('click', function () {
                     menu.classList.remove('open');
                     toggleBtn.setAttribute('aria-expanded', 'false');
                 });
@@ -1611,8 +1669,8 @@
                 '.reveal, .reveal-left, .reveal-right, .stagger-children, .section-popup, .section-popdown'
             );
 
-            const revealObserver = new IntersectionObserver(function(entries) {
-                entries.forEach(function(entry) {
+            const revealObserver = new IntersectionObserver(function (entries) {
+                entries.forEach(function (entry) {
                     if (entry.isIntersecting) {
                         entry.target.classList.add('visible');
                     } else {
@@ -1624,18 +1682,18 @@
                 rootMargin: '0px 0px -30px 0px'
             });
 
-            revealEls.forEach(function(el) {
+            revealEls.forEach(function (el) {
                 revealObserver.observe(el);
             });
 
             // ===== FAQ ACCORDION =====
-            document.querySelectorAll('.faq-toggle').forEach(function(btn) {
-                btn.addEventListener('click', function() {
+            document.querySelectorAll('.faq-toggle').forEach(function (btn) {
+                btn.addEventListener('click', function () {
                     const content = this.nextElementSibling;
                     const icon = this.querySelector('i');
                     const isOpen = content.classList.contains('open');
-                    document.querySelectorAll('.faq-content').forEach(function(c) { c.classList.remove('open'); });
-                    document.querySelectorAll('.faq-toggle i').forEach(function(i) { i.classList.remove('open'); });
+                    document.querySelectorAll('.faq-content').forEach(function (c) { c.classList.remove('open'); });
+                    document.querySelectorAll('.faq-toggle i').forEach(function (i) { i.classList.remove('open'); });
                     if (!isOpen) {
                         content.classList.add('open');
                         icon.classList.add('open');
@@ -1644,8 +1702,8 @@
             });
 
             // ===== SMOOTH SCROLL =====
-            document.querySelectorAll('a[href^="#"]').forEach(function(a) {
-                a.addEventListener('click', function(e) {
+            document.querySelectorAll('a[href^="#"]').forEach(function (a) {
+                a.addEventListener('click', function (e) {
                     e.preventDefault();
                     const target = document.querySelector(this.getAttribute('href'));
                     if (target) {
@@ -1655,15 +1713,15 @@
             });
 
             // ===== CONTACT FORM =====
-            document.getElementById('contactForm').addEventListener('submit', function(e) {
+            document.getElementById('contactForm').addEventListener('submit', function (e) {
                 e.preventDefault();
                 alert('Thank you for your message! We\'ll get back to you soon.');
                 this.reset();
             });
 
             // ===== 3D CARD TILT =====
-            document.querySelectorAll('.contact-info .item, .faq-item').forEach(function(card) {
-                card.addEventListener('mousemove', function(e) {
+            document.querySelectorAll('.contact-info .item, .faq-item').forEach(function (card) {
+                card.addEventListener('mousemove', function (e) {
                     const rect = this.getBoundingClientRect();
                     const x = (e.clientX - rect.left) / rect.width - 0.5;
                     const y = (e.clientY - rect.top) / rect.height - 0.5;
@@ -1673,7 +1731,7 @@
                         'translateY(-4px) rotateX(' + rotX + 'deg) rotateY(' + rotY + 'deg)';
                     this.style.transition = 'transform 0.05s ease';
                 });
-                card.addEventListener('mouseleave', function() {
+                card.addEventListener('mouseleave', function () {
                     this.style.transform = 'translateY(0) rotateX(0) rotateY(0)';
                     this.style.transition = 'transform 0.5s cubic-bezier(0.22, 1, 0.36, 1)';
                 });

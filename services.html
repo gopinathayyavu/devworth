@@ -11,7 +11,7 @@
     <link rel="icon" type="image/png" href="assets/Devworth Technologies-lg.png">
     <!-- Font Awesome 6 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
-
+    <link rel="stylesheet" href="assets/css/style.css">
     <!-- Google Fonts: Inter + Playfair Display -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -185,13 +185,16 @@
                 transform: translateY(0) scale(0.6) rotate(0deg);
                 opacity: 0;
             }
+
             8% {
                 opacity: var(--bubble-opacity);
                 transform: translateY(0) scale(0.8) rotate(5deg);
             }
+
             85% {
                 opacity: calc(var(--bubble-opacity) * 1.8);
             }
+
             100% {
                 transform: translateY(-115vh) scale(0.2) rotate(720deg);
                 opacity: 0;
@@ -810,6 +813,7 @@
                 opacity: 0;
                 transform: translateY(30px);
             }
+
             to {
                 opacity: 1;
                 transform: translateY(0);
@@ -1256,7 +1260,8 @@
             <div class="text-center reveal">
                 <span class="section-label">Our Services</span>
                 <h2 class="section-title">Full-Cycle <span class="light">Development</span></h2>
-                <p class="section-sub mx-auto">We cover the entire software development lifecycle — from discovery and design to deployment and ongoing support.</p>
+                <p class="section-sub mx-auto">We cover the entire software development lifecycle — from discovery and
+                    design to deployment and ongoing support.</p>
             </div>
 
             <div class="grid-2 stagger-children">
@@ -1264,7 +1269,8 @@
                 <div class="service-card-detailed">
                     <div class="icon"><i class="fas fa-code"></i></div>
                     <h3>Custom Software</h3>
-                    <p>Tailored solutions designed to solve your unique business challenges. We build scalable, secure, and maintainable software that grows with you.</p>
+                    <p>Tailored solutions designed to solve your unique business challenges. We build scalable, secure,
+                        and maintainable software that grows with you.</p>
                     <div class="features">
                         <span>Enterprise-grade</span>
                         <span>Scalable</span>
@@ -1277,7 +1283,8 @@
                 <div class="service-card-detailed">
                     <div class="icon"><i class="fas fa-globe"></i></div>
                     <h3>Web Applications</h3>
-                    <p>Modern, responsive, and high-performance web apps that delight users. From SPAs to complex dashboards — we've got you covered.</p>
+                    <p>Modern, responsive, and high-performance web apps that delight users. From SPAs to complex
+                        dashboards — we've got you covered.</p>
                     <div class="features">
                         <span>React / Vue</span>
                         <span>Responsive</span>
@@ -1290,7 +1297,8 @@
                 <div class="service-card-detailed">
                     <div class="icon"><i class="fas fa-mobile-alt"></i></div>
                     <h3>Mobile Apps</h3>
-                    <p>Native and cross-platform mobile experiences that are intuitive, fast, and engaging. iOS, Android, and hybrid solutions.</p>
+                    <p>Native and cross-platform mobile experiences that are intuitive, fast, and engaging. iOS,
+                        Android, and hybrid solutions.</p>
                     <div class="features">
                         <span>iOS / Android</span>
                         <span>Flutter / React Native</span>
@@ -1303,7 +1311,8 @@
                 <div class="service-card-detailed">
                     <div class="icon"><i class="fas fa-brain"></i></div>
                     <h3>AI &amp; Machine Learning</h3>
-                    <p>Intelligent automation, predictive analytics, and AI-powered features that give you a competitive edge.</p>
+                    <p>Intelligent automation, predictive analytics, and AI-powered features that give you a competitive
+                        edge.</p>
                     <div class="features">
                         <span>NLP</span>
                         <span>Computer Vision</span>
@@ -1316,7 +1325,8 @@
                 <div class="service-card-detailed">
                     <div class="icon"><i class="fas fa-cloud"></i></div>
                     <h3>SaaS Products</h3>
-                    <p>From MVP to enterprise-grade SaaS platforms. We build multi-tenant, subscription-based products that scale with your user base.</p>
+                    <p>From MVP to enterprise-grade SaaS platforms. We build multi-tenant, subscription-based products
+                        that scale with your user base.</p>
                     <div class="features">
                         <span>Multi-tenant</span>
                         <span>Subscription</span>
@@ -1329,7 +1339,34 @@
                 <div class="service-card-detailed">
                     <div class="icon"><i class="fas fa-building"></i></div>
                     <h3>Enterprise Systems</h3>
-                    <p>Robust, secure, and compliant software for mission-critical operations. Built for reliability and performance at scale.</p>
+                    <p>Robust, secure, and compliant software for mission-critical operations. Built for reliability and
+                        performance at scale.</p>
+                    <div class="features">
+                        <span>Compliant</span>
+                        <span>Reliable</span>
+                        <span>High-performance</span>
+                        <span>Integrated</span>
+                    </div>
+                </div>
+                <!-- Digital Marketing -->
+                <div class="service-card-detailed">
+                    <div class="icon"><i class='fas fa-ad'></i></div>
+                    <h3>Digital Marketing</h3>
+                    <p>Drive growth with SEO, social media, PPC campaigns, and data-driven strategies that increase
+                        visibility and conversions.</p>
+                    <div class="features">
+                        <span>Compliant</span>
+                        <span>Reliable</span>
+                        <span>High-performance</span>
+                        <span>Integrated</span>
+                    </div>
+                </div>
+                <!-- Data Analytics -->
+                <div class="service-card-detailed">
+                    <div class="icon"><i class='fas fa-clone'></i></div>
+                    <h3>Data Analytics</h3>
+                    <p>Transform raw data into actionable insights with dashboards, reporting, and predictive analytics
+                        for smarter decisions.</p>
                     <div class="features">
                         <span>Compliant</span>
                         <span>Reliable</span>
@@ -1349,7 +1386,8 @@
             <div class="text-center reveal">
                 <span class="section-label">Technology Stack</span>
                 <h2 class="section-title">Tools We <span class="light">Trust</span></h2>
-                <p class="section-sub mx-auto">We use modern, battle-tested technologies to build robust, scalable software that stands the test of time.</p>
+                <p class="section-sub mx-auto">We use modern, battle-tested technologies to build robust, scalable
+                    software that stands the test of time.</p>
             </div>
 
             <div class="tech-grid stagger-children">
@@ -1413,29 +1451,39 @@
             <div class="text-center reveal">
                 <span class="section-label">How We Work</span>
                 <h2 class="section-title">Our <span class="light">Approach</span></h2>
-                <p class="section-sub mx-auto">We follow a transparent, agile process that keeps you informed and involved every step of the way.</p>
+                <p class="section-sub mx-auto">We follow a transparent, agile process that keeps you informed and
+                    involved every step of the way.</p>
             </div>
 
-            <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:24px;margin-top:48px;" class="stagger-children">
-                <div style="background:var(--bg-card);padding:24px 20px;border-radius:var(--radius-md);border:1px solid var(--border-color);text-align:center;transition:all var(--transition);">
+            <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:24px;margin-top:48px;"
+                class="stagger-children">
+                <div
+                    style="background:var(--bg-card);padding:24px 20px;border-radius:var(--radius-md);border:1px solid var(--border-color);text-align:center;transition:all var(--transition);">
                     <div style="font-size:32px;color:var(--blue-500);margin-bottom:8px;">01</div>
                     <h4 style="font-size:16px;font-weight:700;color:var(--text-primary);">Discovery</h4>
-                    <p style="font-size:13px;color:var(--text-secondary);margin-top:4px;">We learn about your goals, users, and challenges.</p>
+                    <p style="font-size:13px;color:var(--text-secondary);margin-top:4px;">We learn about your goals,
+                        users, and challenges.</p>
                 </div>
-                <div style="background:var(--bg-card);padding:24px 20px;border-radius:var(--radius-md);border:1px solid var(--border-color);text-align:center;transition:all var(--transition);">
+                <div
+                    style="background:var(--bg-card);padding:24px 20px;border-radius:var(--radius-md);border:1px solid var(--border-color);text-align:center;transition:all var(--transition);">
                     <div style="font-size:32px;color:var(--blue-500);margin-bottom:8px;">02</div>
                     <h4 style="font-size:16px;font-weight:700;color:var(--text-primary);">Design &amp; Plan</h4>
-                    <p style="font-size:13px;color:var(--text-secondary);margin-top:4px;">We map architecture, UI/UX, and a clear roadmap.</p>
+                    <p style="font-size:13px;color:var(--text-secondary);margin-top:4px;">We map architecture, UI/UX,
+                        and a clear roadmap.</p>
                 </div>
-                <div style="background:var(--bg-card);padding:24px 20px;border-radius:var(--radius-md);border:1px solid var(--border-color);text-align:center;transition:all var(--transition);">
+                <div
+                    style="background:var(--bg-card);padding:24px 20px;border-radius:var(--radius-md);border:1px solid var(--border-color);text-align:center;transition:all var(--transition);">
                     <div style="font-size:32px;color:var(--blue-500);margin-bottom:8px;">03</div>
                     <h4 style="font-size:16px;font-weight:700;color:var(--text-primary);">Build &amp; Test</h4>
-                    <p style="font-size:13px;color:var(--text-secondary);margin-top:4px;">Agile development with continuous testing and feedback.</p>
+                    <p style="font-size:13px;color:var(--text-secondary);margin-top:4px;">Agile development with
+                        continuous testing and feedback.</p>
                 </div>
-                <div style="background:var(--bg-card);padding:24px 20px;border-radius:var(--radius-md);border:1px solid var(--border-color);text-align:center;transition:all var(--transition);">
+                <div
+                    style="background:var(--bg-card);padding:24px 20px;border-radius:var(--radius-md);border:1px solid var(--border-color);text-align:center;transition:all var(--transition);">
                     <div style="font-size:32px;color:var(--blue-500);margin-bottom:8px;">04</div>
                     <h4 style="font-size:16px;font-weight:700;color:var(--text-primary);">Deploy &amp; Support</h4>
-                    <p style="font-size:13px;color:var(--text-secondary);margin-top:4px;">Smooth deployment with ongoing maintenance and improvements.</p>
+                    <p style="font-size:13px;color:var(--text-secondary);margin-top:4px;">Smooth deployment with ongoing
+                        maintenance and improvements.</p>
                 </div>
             </div>
         </div>
@@ -1448,11 +1496,28 @@
         <div class="container">
             <div class="reveal">
                 <h2>Ready to <span style="color:var(--blue-500);">Build Something Great</span>?</h2>
-                <p>Let's talk about your project. We'd love to hear your ideas and explore how we can bring them to life.</p>
-                <a href="contact.html" class="btn btn-primary"><span><i class="fas fa-paper-plane"></i> Start a Project</span></a>
+                <p>Let's talk about your project. We'd love to hear your ideas and explore how we can bring them to
+                    life.</p>
+                <a href="contact.html" class="btn btn-primary"><span><i class="fas fa-paper-plane"></i> Start a
+                        Project</span></a>
             </div>
         </div>
     </section>
+    <!-- Floating Contact Buttons -->
+    <div class="floating-contact">
+        <!-- WhatsApp -->
+        <a href="https://wa.me/6374426001" target="_blank" class="whatsapp-btn" aria-label="WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+
+        <!-- Call -->
+        <a href="tel:+916374426001" class="call-btn" aria-label="Call">
+            <i class="fas fa-phone-alt"></i>
+        </a>
+    </div>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 
     <!-- ============================================================
     FOOTER
@@ -1497,7 +1562,7 @@
     JAVASCRIPT
     ============================================================ -->
     <script>
-        (function() {
+        (function () {
             'use strict';
 
             // ===== BUBBLES =====
@@ -1548,7 +1613,7 @@
             icon.className = currentTheme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
             indicator.textContent = isManual ? 'Manual' : 'Auto';
 
-            toggle.addEventListener('click', function() {
+            toggle.addEventListener('click', function () {
                 const current = html.getAttribute('data-theme');
                 const next = current === 'light' ? 'dark' : 'light';
                 html.setAttribute('data-theme', next);
@@ -1559,7 +1624,7 @@
                 indicator.textContent = 'Manual';
             });
 
-            setInterval(function() {
+            setInterval(function () {
                 if (!isManual) {
                     const auto = getAutoTheme();
                     const current = html.getAttribute('data-theme');
@@ -1572,7 +1637,7 @@
             }, 60000);
 
             // ===== PROGRESS BAR =====
-            window.addEventListener('scroll', function() {
+            window.addEventListener('scroll', function () {
                 const scrollTop = window.pageYOffset;
                 const docHeight = document.documentElement.scrollHeight - window.innerHeight;
                 document.getElementById('progressBar').style.width = (scrollTop / docHeight) * 100 + '%';
@@ -1580,19 +1645,19 @@
 
             // ===== NAVBAR SCROLL =====
             const navbar = document.getElementById('navbar');
-            window.addEventListener('scroll', function() {
+            window.addEventListener('scroll', function () {
                 navbar.classList.toggle('scrolled', window.pageYOffset > 50);
             });
 
             // ===== MOBILE MENU =====
             const toggleBtn = document.getElementById('navToggle');
             const menu = document.getElementById('mobileMenu');
-            toggleBtn.addEventListener('click', function() {
+            toggleBtn.addEventListener('click', function () {
                 menu.classList.toggle('open');
                 toggleBtn.setAttribute('aria-expanded', menu.classList.contains('open'));
             });
-            menu.querySelectorAll('a').forEach(function(link) {
-                link.addEventListener('click', function() {
+            menu.querySelectorAll('a').forEach(function (link) {
+                link.addEventListener('click', function () {
                     menu.classList.remove('open');
                     toggleBtn.setAttribute('aria-expanded', 'false');
                 });
@@ -1603,8 +1668,8 @@
                 '.reveal, .reveal-left, .reveal-right, .stagger-children, .section-popup, .section-popdown'
             );
 
-            const revealObserver = new IntersectionObserver(function(entries) {
-                entries.forEach(function(entry) {
+            const revealObserver = new IntersectionObserver(function (entries) {
+                entries.forEach(function (entry) {
                     if (entry.isIntersecting) {
                         entry.target.classList.add('visible');
                     } else {
@@ -1616,13 +1681,13 @@
                 rootMargin: '0px 0px -30px 0px'
             });
 
-            revealEls.forEach(function(el) {
+            revealEls.forEach(function (el) {
                 revealObserver.observe(el);
             });
 
             // ===== SMOOTH SCROLL =====
-            document.querySelectorAll('a[href^="#"]').forEach(function(a) {
-                a.addEventListener('click', function(e) {
+            document.querySelectorAll('a[href^="#"]').forEach(function (a) {
+                a.addEventListener('click', function (e) {
                     e.preventDefault();
                     const target = document.querySelector(this.getAttribute('href'));
                     if (target) {
@@ -1632,8 +1697,8 @@
             });
 
             // ===== 3D CARD TILT =====
-            document.querySelectorAll('.service-card-detailed, .tech-item, .services-cta .btn, #how-we-work > .container > .stagger-children > *').forEach(function(card) {
-                card.addEventListener('mousemove', function(e) {
+            document.querySelectorAll('.service-card-detailed, .tech-item, .services-cta .btn, #how-we-work > .container > .stagger-children > *').forEach(function (card) {
+                card.addEventListener('mousemove', function (e) {
                     const rect = this.getBoundingClientRect();
                     const x = (e.clientX - rect.left) / rect.width - 0.5;
                     const y = (e.clientY - rect.top) / rect.height - 0.5;
@@ -1643,7 +1708,7 @@
                         'translateY(-4px) rotateX(' + rotX + 'deg) rotateY(' + rotY + 'deg)';
                     this.style.transition = 'transform 0.05s ease';
                 });
-                card.addEventListener('mouseleave', function() {
+                card.addEventListener('mouseleave', function () {
                     this.style.transform = 'translateY(0) rotateX(0) rotateY(0)';
                     this.style.transition = 'transform 0.5s cubic-bezier(0.22, 1, 0.36, 1)';
                 });
